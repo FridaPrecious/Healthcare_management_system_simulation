@@ -1,6 +1,7 @@
 # Healthcare_management_system_simulation
 
-How to run and test the simulation
+How to run and test the simulation.
+
 You can test the system in two ways:
 
 Test the APIs using Postman.
