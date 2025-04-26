@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Healthcare System</title>
+    <script>
+        async function registerClient() {
+            const response = await fetch('http://127.0.0.1:5000/api/clients', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name: document.getElementById('name').value,
+                    dob: document.getElementById('dob').value,
+                    gender: document.getElementById('gender').value
+                })
+            });
+            alert(await response.text());
+        }
+    </script>
+</head>
+<body>
+    <h1>Register Client</h1>
+    <input type="text" id="name" placeholder="Name"><br>
+    <input type="date" id="dob" placeholder="DOB"><br>
+    <input type="text" id="gender" placeholder="Gender"><br>
+    <button onclick="registerClient()">Register</button>
+</body>
+</html>
