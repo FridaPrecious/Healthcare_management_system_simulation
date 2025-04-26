@@ -1,11 +1,17 @@
 # Healthcare_management_system_simulation
 
 How to run and test the simulation
+You can test the system in two ways:
 
-Test via Postman or run the index.html file in a browser
+Test the APIs using Postman.
+Alternatively, run the index.html file in a browser (if you built a frontend).
 
 
-We can test the APIs by running thr following commands in our bash i.e TESTING USING POSTMAN
+Make sure your Flask server is running:
+Run the command: python app.py
+By default, it will run at:http://127.0.0.1:5000
+
+We can now test the APIs by running thr following commands in our bash i.e TESTING USING POSTMAN
 
 CREATING A PROGRAM
 curl -X POST http://127.0.0.1:5000/api/programs \
@@ -16,7 +22,7 @@ REGISTERING CLIENTS
 
 curl -X POST http://127.0.0.1:5000/api/clients \
 -H "Content-Type: application/json" \
--d '{"name":"Precious", "dob":"2003-29-11", "gender":"Female"}'
+-d '{"name":"Precious", "dob":"2003-11-29", "gender":"Female"}'
 
 ENROLLING CLIENTS
 curl -X POST http://127.0.0.1:5000/api/enrollments \
@@ -43,3 +49,14 @@ curl -X POST http://127.0.0.1:5000/api/programs \
 -H "Content-Type: application/json" \
 -H "Authorization: Bearer eyJhbGci..." \
 -d '{"name":"HIV", "description":"HIV Treatment Program"}'
+
+
+
+Important Notes
+Always login first to get the access token when accessing protected routes.
+
+The server must be running locally at http://127.0.0.1:5000 for the commands to work.
+
+Remember to use the correct Authorization Bearer token after login for protected endpoints.
+
+🙏 Thank you for using Healthcare Management System Simulation!
