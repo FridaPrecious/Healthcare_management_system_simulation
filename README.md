@@ -16,7 +16,7 @@ REGISTERING CLIENTS
 
 curl -X POST http://127.0.0.1:5000/api/clients \
 -H "Content-Type: application/json" \
--d '{"name":"Precious", "dob":"2003-29-11", "gender":"Femaleale"}'
+-d '{"name":"Precious", "dob":"2003-29-11", "gender":"Female"}'
 
 ENROLLING CLIENTS
 curl -X POST http://127.0.0.1:5000/api/enrollments \
