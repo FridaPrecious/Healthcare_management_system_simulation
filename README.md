@@ -53,7 +53,9 @@ curl -X POST http://127.0.0.1:5000/api/programs \
 
 
 
-Important Notes
+Important Notes.
+
+
 Always login first to get the access token when accessing protected routes.
 
 The server must be running locally at http://127.0.0.1:5000 for the commands to work.
